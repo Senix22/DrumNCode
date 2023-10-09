@@ -27,9 +27,7 @@ object InternalModule {
             context,
             PhotoDatabase::class.java,
             PhotoDatabase.DATABASE_NAMESPACE
-        )
-            .fallbackToDestructiveMigration()
-            .build()
+        ).build()
 
     @Singleton
     @Provides
