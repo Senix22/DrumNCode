@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/movieFragment">
+
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.example.drumncode.ui.photolist.PhotoListFragment"
+        android:label="Blank"
+        tools:layout="@layout/photo_list_fragment">
+        <argument
+            android:name="currentId"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="prevId"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="NextId"
+            android:defaultValue=""
+            app:argType="string" />
+        <action
+            android:id="@+id/action_show_movie"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.drumncode.ui.photodetails.PhotoDetailsFragment"
+        android:label="Blank"
+        tools:layout="@layout/photo_details_layout" />
+</navigation>
